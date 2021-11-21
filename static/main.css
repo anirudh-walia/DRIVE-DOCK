@@ -1,0 +1,155 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+	/* background-image: url(sidebg.png); */
+    background: linear-gradient(-45deg, #000000, #111014, #232329, #37373d);
+	background-size: 400% 400%;
+	animation: gradient 9s ease infinite;
+	height: 100vh;
+    overflow: hidden;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#navdiv1 img{
+    height: 90px;
+    width: 90px;
+    /* margin-top: 20px; */
+    margin-left: 10px;
+}
+
+#navdiv1{
+    display: inline;
+}
+#navdiv2{
+    display: block;
+    float: right;
+    margin-top: 12.5px;
+    margin-right: 2.5px;
+}
+#navdiv2 img{
+    height: 55px;
+    width: 55px;
+    /* margin-top: 20px; */
+    margin-right: 20px;
+    padding-left: 20px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+#navdiv2 p{
+    text-align: left;
+    color: white;
+    font-family: 'Source sans pro', sans-serif;
+    padding-right: 20px;
+}
+
+#navdiv2 img:hover{
+    height: 56.5px;
+    width: 56.5px;
+    transition-timing-function: linear;
+    transition-duration: 0.05s;
+}
+
+main h1{
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    padding-top: 25px;
+}
+
+.profiles{
+    display: flex;
+    justify-content: space-around;
+}
+#div1 img, #div2 img, #div3 img, #div4 img{
+    padding-top: 80px;
+    height: 200px;
+    width: 200px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+#div1 img:hover, #div2 img:hover, #div3 img:hover, #div4 img:hover{
+    height: 220px;
+    width: 220px;
+}
+
+footer p a{
+    float: right;
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    font-family: 'Source sans pro';
+    padding-top: 130px;
+    padding-right: 30px;
+}
+
+.profilename{
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-top: 20px;
+    font-size: large;
+}
+
+.profiles2{
+    display: flex;
+    justify-content: space-around;
+}

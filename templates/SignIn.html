@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Drive Dock</title>
+    <link rel="stylesheet" href="static/SignIn2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <!-- source sans pro -->
+</head>
+
+<body>
+
+<!--    <img src="static/images/manfinal.png" id="centreimg">-->
+<!--    <img src="static/images/sidebg.png" id="sideimg">-->
+    <img src="static/images/finalbg-01.png" id="finalbg">
+    <div id="formbg">
+        <span id="Signin">SIGN IN</span>
+
+        <form action="/signinverification" method="POST">
+            <h1 style="color:green;  text-align: center; font-size:30px;">{{msg}}</h1>
+            <div class="details">Email</div>
+            <div class="email">
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="details">Password <a href="#"><span>Forgot password?</span></a></div>
+
+            <div class="password">
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="details">
+                <input type="checkbox" id="rememberme">
+                <span>Remember Me</span>
+                <!-- <a href="#"><span>Forgot password?</span></a> -->
+            </div>
+
+            <div id="connection">
+
+                    <button id="button" type="submit"  value="Submit">Continue</button>
+            </div>
+        </form>
+
+        <div class="noaccount">
+            <span>Don't have an account? <a href="/signup"><span
+                        id="signup">Sign Up</span></a></span>
+        </div>
+        <div id="home">
+            <a href=/">© Drive Dock</a>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

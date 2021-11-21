@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/SignUp.css">
+    <title>Sign Up - Drive Dock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <!-- source sans pro -->
+</head>
+
+<body>
+    <img src="static/images/SignUp-01.png" id="finalbg">
+    <div id="formbg">
+        <span id="signup">SIGN UP</span>
+
+        <form action="/saveuserdata"  method="POST" form="form">
+            <div class="details">First Name</div>
+            <div class="fname">
+                <input type="text" id="fname" name="fname" required>
+            </div>
+            <div class="details">Last Name</div>
+            <div class="lname">
+                <input type="text" id="lname" name="lname" required>
+            </div>
+            <!-- <div class="details">Age</div>
+            <div class="age">
+                <input type="number" id="age" name="age" required>
+            </div> -->
+            <div class="details">Enter Email</div>
+            <div class="email">
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="details">Password</div>
+
+            <div class="password">
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <!-- <div class="details">
+                <input type="checkbox" id="rememberme">
+                <span>Remember Me</span>
+               <a href="#"><span>Forgot password?</span></a>
+            </div> -->
+
+            <div id="connection">
+
+                    <button id="button" type="submit"  value="Submit">Register</button>
+            </div>
+        </form>
+
+        <div class="noaccount">
+            <span>Already have an account? <a href="/signin"><span
+                        id="signin">Sign In</span></a></span>
+        </div>
+        <!-- <div id="home">
+            <a href="file:///C:/Users/samak/Desktop/D/DriveDock/DriveDock.html">© Drive Dock</a>
+        </div> -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars - Drive Dock</title>
+    <link rel="stylesheet" href="static/Cars.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav>
+
+        <div id="navdiv1">
+            <img src="static/images/DD.png">
+        </div>
+
+        <div id="navdiv2">
+            <a id="anchor" href=" file:///C:/Users/samak/Desktop/D/DriveDock/SignIn2.html">
+                <img src="static/images/UserProfile_Mesa de trabajo 1 copy 2.png">
+            </a>
+            <p>Switch Profile</p>
+        </div>
+        <div id="navdiv3">
+            <ul>
+                <li>
+                    <span class="class123"><a href="#">My Cars</a></span>
+                </li>
+                <li>
+                    <span class="class123"><a href="/adddriver">Add Drivers</a></span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      ADD DRIVER
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="/savedriver" method="POST">
+              <div class="form-group">
+                <label for="drivername">Email address</label>
+                <input type="text" class="form-control" id="drivername" placeholder="Drriver name" name="driver">
+                <small id="emailHelp" class="form-text text-muted">This will be your Driver name</small>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="images">
+
+        <div><img src="static/images/ErrorFinal-01.png" id="image1"></div>
+        <div>
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="Search Drivers">
+                <button type="submit" class="searchButton">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+            <table class="table table-striped table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">DRIVER</th>
+                  <th scope="col">DROWSINESS REPORT</th>
+                  <th scope="col">DRIVE REPORT</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for row in data %}
+                <tr>
+                  <th scope="row"></th>
+                  <td>{{row}}</td>
+                  <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                     OPEN REPORT
+                  </button>
+                  </td>
+                  <td>@mdo</td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">LOG</th>
+
+        </tr>
+      </thead>
+      <tbody>
+      {% for row2 in data2 %}
+        <tr>
+          <th scope="row"></th>
+          <td>{{row2}}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+            <div class="search" id="golive">
+                <form action="/videoopen" method="POST">
+                <button id="golivebt" type="submit">View Live!</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
